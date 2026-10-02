@@ -31,6 +31,7 @@ python3 svg_animator.py <subcomando> [opciones]
 - [`menu` — Menú interactivo](#menu--menú-interactivo)
 - [Qué se soporta del SVG y limitaciones conocidas](#qué-se-soporta-del-svg-y-limitaciones-conocidas)
 - [Integración en un proyecto Android](#integración-en-un-proyecto-android)
+- [Uso con un agente de Claude Code](#uso-con-un-agente-de-claude-code)
 
 ## Conceptos básicos
 
@@ -450,3 +451,17 @@ drawable?.start()
 `AnimatedVectorDrawableCompat` (de `androidx.vectordrawable:vectordrawable-animated`)
 es la opción recomendada para compatibilidad hacia atrás; en API 25+ también
 funciona `AnimatedVectorDrawable` directamente.
+
+## Uso con un agente de Claude Code
+
+Este repositorio incluye un subagente de [Claude Code](https://claude.com/claude-code)
+en [`.claude/agents/svg-animator.md`](.claude/agents/svg-animator.md), con todo
+el contexto de los subcomandos, opciones, flujo de trabajo recomendado y
+limitaciones conocidas, para que una IA pueda operar `svg_animator.py` por el
+usuario (convertir, verificar, reparar, listar y editar) sin tener que
+explicárselo cada vez. Se activa automáticamente al trabajar en este repo con
+Claude Code, o se puede invocar explícitamente pidiendo el agente `svg-animator`.
+
+El subcomando `menu` queda fuera del alcance del agente — es interactivo
+(lee de `stdin`) y está pensado para que lo use una persona directamente en la
+terminal, no una IA.
