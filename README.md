@@ -465,3 +465,7 @@ Claude Code, o se puede invocar explícitamente pidiendo el agente `svg-animator
 El subcomando `menu` queda fuera del alcance del agente — es interactivo
 (lee de `stdin`) y está pensado para que lo use una persona directamente en la
 terminal, no una IA.
+
+## Licencia y propiedad intelectual
+
+Titularidad y registros: [docs/PROPIEDAD_INTELECTUAL.md](docs/PROPIEDAD_INTELECTUAL.md).
